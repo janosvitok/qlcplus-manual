@@ -1,0 +1,28 @@
+=== Select Input Channel
+
+Whenever an Input Channel needs to be selected, for example when
+manually attaching a channel from an
+link:concept.html#InputPlugins[Input Plugin] to a
+link:virtualconsole.html[Virtual Console] widget, the Select Input
+Channel dialog is used.
+
+The dialog is very straightforward; there is a list of input universes
+and each universe that has an link:concept.html#Input[Input Line]
+attached to it, displays the line's (or the attached device's) name
+after the universe number. Under each operational universe, there is a
+list of channels provided by that universe. You can choose from these
+channels or select one manually.
+
+If you have an link:concept.html#InputProfiles[Input Profile] attached
+to the universe, you see the individual channel names and numbers for
+the device. If there isn't a Profile attached to an input universe, you
+will need to type the channel number manually, by double-clicking the
+item that tells you to do that and then type in the channel number
+manually. See also the link:howto-input-profiles.html[tutorial on input
+profiles]
+
+*NOTE:* All link:virtualconsole.html[Virtual Console] widgets that have
+been made _external-input-aware_, provide an option for automatically
+detecting the input channel as well, so that you don't need do this
+selection manually.
+

@@ -1,0 +1,88 @@
+== Main Window
+
+The QLC+ Main Window consists of three main parts:
+
+. A Menu bar containing buttons for global functions
+. Active panels selected by their respective tabs
+. Tabs that allow the selection of one of the QLC+ panels
+
+image:../images/mainwindow.png[../images/mainwindow]
+
+Most of the controls throughout the software have tooltips, which pop up
+after holding your mouse cursor over them for a short while.
+
+=== Menu bar (1)
+
+The menu bar on the top of the workspace window contains the following
+buttons (from left to right):
+
+'''''
+
+image:../icons/filenew.png[../icons/filenew] New workspace (CTRL+N) +
+image:../icons/fileopen.png[../icons/fileopen] Open an existing
+workspace (hold the button longer for a list of recent files) (CTRL+O) +
+image:../icons/filesave.png[../icons/filesave] Save the current
+workspace (CTRL+S) +
+image:../icons/filesaveas.png[../icons/filesaveas] Save the current
+workspace with a new name +
+
+'''''
+
+image:../icons/monitor.png[../icons/monitor,width=32]link:fixturemonitor.html[DMX
+Monitor] (CTRL+M) +
+image:../icons/diptool.png[../icons/diptool,width=32]link:addresstool.html[DMX
+Address tool] +
+image:../icons/audioinput.png[../icons/audioinput,width=32]link:audiotriggers.html[Audio
+triggers] +
+
+'''''
+
+image:../icons/fullscreen.png[../icons/fullscreen] Toggle full screen
+mode (CTRL+F11) +
+image:../icons/help.png[../icons/help] View this documentation
+(Shift+F1) +
+image:../icons/qlcplus.png[../icons/qlcplus,width=32] View information
+about QLC+ +
+
+'''''
+
+image:../icons/add_dump.png[../icons/add_dump,width=32]link:dmxdump.html[DMX
+Dump] (CTRL+D) +
+image:../icons/liveedit.png[../icons/liveedit,width=32] Live Edit:
+allows you to modify a function while QLC+ is in Operate Mode +
+image:../icons/liveedit_vc.png[../icons/liveedit_vc,width=32] Live Edit
+Virtual Console: allows you to modify the Virtual Console while QLC+ is
+in Operate Mode. Click to Toggle +
+image:../icons/panic.png[../icons/panic] Stop All Functions
+(CTRL+Shift+ESC) +
+image:../icons/blackout.png[../icons/blackout] Toggle Blackout +
+image:../icons/operate.png[../icons/operate] Switch between Design Mode
+and Operate Mode (CTRL+F12)
+
+=== Active Panel (2)
+
+Everything happens here. Which panel is active depends on which tab is
+currently selected.
+
+=== Panel Tabs (3)
+
+At the bottom of main window you can find easy eye catching icons for
+switching between QLC+ contexts. +
+By double clicking on a tab, *a context can be detached on a separate
+window*. To reattach a detached context, just close the window. +
+QLC+ contexts appear in the following order (from left to right):
+
+image:../icons/fixture.png[../icons/fixture] View the
+link:fixturemanager.html[Fixture Manager] +
+image:../icons/function.png[../icons/function] View the
+link:functionmanager.html[Function Manager] +
+image:../icons/show.png[../icons/show] View the
+link:showmanager.html[Show Manager] +
+image:../icons/virtualconsole.png[../icons/virtualconsole] View the
+link:virtualconsole.html[Virtual Console] +
+image:../icons/slidermatrix.png[../icons/slidermatrix] View the
+link:simpledesk.html[Simple Desk] +
+image:../icons/input_output.png[../icons/input_output] View the
+link:howto-input-output-mapping.html[Input/Output] configuration
+manager
+

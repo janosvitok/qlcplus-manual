@@ -1,0 +1,48 @@
+=== Channel Groups Editor
+
+The Channel Groups editor it activated by clicking on the "Channels
+Groups" tab in the link:fixturemanager.html[Fixture Manager] panel. +
+With this functionality (introduced in QLC+ version 4.0.0), it is
+possible to create groups of channels with the same functionality. +
+For example, if you have 20 PARs you might want to control the RED
+channel of all of them with a single fader. +
+
+==== Controls
+
+[cols=",",]
+|===
+|image:../icons/edit_add.png[../icons/edit_add] |Add a new channels
+group to the workspace with the Add/Edit Channels Group dialog.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected channels group from the workspace.
+
+|image:../icons/configure.png[../icons/configure] |Edit an existing
+channels group in the workspace with the Add/Edit Channels Group dialog.
+
+|image:../icons/up.png[../icons/up] |Move the selected group up in the
+list to change the logical order.
+
+|image:../icons/down.png[../icons/down] |Move the selected group down in
+the list to change the logical order.
+|===
+
+==== Add/Edit Channels Group
+
+[cols=",",]
+|===
+|Group Name |Set/change name of the channels group
+
+|Channels list |Check channels that should be included in this channels
+group. Uncheck those that should not.
+
+|Apply changes to all fixtures of the same type |When checked, clicking
+on a channel will select/deselect the same channel on all fixtures of
+the same type. Use it when you want to select e.g. all Red channels of
+all fixture of a particular LED PAR model
+
+|External input |Select external input for this channels group for
+easier control in Function Manager. External input for channels groups
+will not work elsewhere.
+|===
+

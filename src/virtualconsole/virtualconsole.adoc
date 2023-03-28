@@ -1,0 +1,159 @@
+== image:../icons/virtualconsole.png[../icons/virtualconsole] Virtual Console
+
+The purpose of the Virtual Console is to act as a blank canvas on which
+the user can create a lighting desk layout of his choice. Users can
+place various GUI (Graphical User Interface) elements, called widgets,
+onto the console surface:
+
+* Buttons for starting and stopping functions
+* Sliders for adjusting channel values or function intensity
+* Speed dials for adjusting function speeds
+* XY Pads for manually moving intelligent light beams
+* Cue lists for theatrical performance purposes
+* Frames for grouping various widgets together
+* Solo Frames for keeping only one button/function active at a time
+* Labels to act as static information banners for other widgets
+
+The topmost part of the Virtual Console is dedicated to a tool bar that
+provides quick access to the most common actions: adding new widgets,
+copying them to/from the clipboard, configuring the widgets and, in case
+of emergencies, a panic button for stopping all currently running
+functions.
+
+Each Virtual Console widget's style can be configured (to some extent).
+Widgets can be moved anywhere and resized to any size on the Virtual
+Console canvas. See the article on link:vcstylingplacement.html[Virtual
+Console Widget Styling & Placement].
+
+=== Tool Bar Controls
+
+image:../icons/button.png[../icons/button]
+
+Add a new link:vcbutton.html[Button] to the currently selected frame.
+
+image:../icons/buttonmatrix.png[../icons/buttonmatrix]
+
+Add a new link:vcbuttonmatrix.html[Button Matrix] to the currently
+selected frame, using the link:addvcbuttonmatrix.html[Add Button Matrix]
+dialog.
+
+image:../icons/slider.png[../icons/slider]
+
+Add a new link:vcslider.html[Slider] to the currently selected frame.
+
+image:../icons/slidermatrix.png[../icons/slidermatrix]
+
+Add a new link:vcslidermatrix.html[Slider Matrix] to the currently
+selected frame.
+
+image:../icons/rgbmatrix.png[../icons/rgbmatrix]
+
+Add a new link:vcmatrix.html[Animation] to the currently selected frame.
+
+image:../icons/knob.png[../icons/knob]
+
+Add a new link:vcslider.html[Knob] to the currently selected frame. This
+is a convenient shortcut for adding a slider widget using the knob
+style.
+
+image:../icons/speed.png[../icons/speed]
+
+Add a new link:vcspeeddial.html[Speed Dial] to the currently selected
+frame.
+
+image:../icons/xypad.png[../icons/xypad]
+
+Add a new link:vcxypad.html[XY Pad] to the currently selected frame.
+
+image:../icons/cuelist.png[../icons/cuelist]
+
+Add a new link:vccuelist.html[Cue List] to the currently selected frame.
+
+image:../icons/frame.png[../icons/frame]
+
+Add a new link:vcframe.html[Frame] to the currently selected frame.
+
+image:../icons/soloframe.png[../icons/soloframe]
+
+Add a new link:vcsoloframe.html[Solo Frame] to the currently selected
+frame.
+
+image:../icons/label.png[../icons/label]
+
+Add a new link:vclabel.html[Label] to the currently selected frame.
+
+image:../icons/audioinput.png[../icons/audioinput]
+
+Add a new link:audiotriggers.html[Audio triggers] widget to the
+currently selected frame.
+
+image:../icons/clock.png[../icons/clock]
+
+Add a new Clock widget to the currently selected frame. This widget can
+be used for 3 purposes: System clock, Stopwatch and Countdown. +
+In the last two cases and when QLC+ is in operate mode, clicking with
+the mouse left button will pause the counter, while clicking with the
+mouse right button will reset the counter to the initial value. +
+When in system clock mode, it is possible to schedule when to start a
+QLC+ function during the time of day.
+
+image:../icons/editcut.png[../icons/editcut]
+
+Cut the currently selected widget(s) to the clipboard. Note that the
+widget(s) will only disappear when pasted into the new location.
+
+image:../icons/editcopy.png[../icons/editcopy]
+
+Copy the currently selected widget(s) to the clipboard.
+
+image:../icons/editpaste.png[../icons/editpaste]
+
+Paste the widget(s) in clipboard to the currently selected frame.
+
+image:../icons/editdelete.png[../icons/editdelete]
+
+Destroy the currently selected widget(s) completely. If a frame has been
+selected, this destroys everything inside it, including other frames.
+
+image:../icons/edit.png[../icons/edit]
+
+Configure the currently selected widget using its own configuration
+dialog.
+
+image:../icons/editclear.png[../icons/editclear]
+
+Rename the currently selected widget(s).
+
+image:../icons/up.png[../icons/up]
+
+Bring the selected widget to front.
+
+image:../icons/down.png[../icons/down]
+
+Send the selected widget to back.
+
+image:../icons/color.png[../icons/color]
+
+Change the background color of the selected widget.
+
+image:../icons/image.png[../icons/image]
+
+Set a background picture for the selected widget.
+
+image:../icons/fontcolor.png[../icons/fontcolor]
+
+Change the font color of the selected widget.
+
+image:../icons/fonts.png[../icons/fonts]
+
+Set the font properties of the selected widget.
+
+image:../icons/configure.png[../icons/configure]
+
+Configure the Virtual Console properties such as the size workspace, the
+widgets' default properties and the Grand Master slider properties.
+
+image:../icons/panic.png[../icons/panic]
+
+Stop all currently running functions.
+

@@ -1,0 +1,61 @@
+=== Add/Edit Fixtures
+
+The same dialog (with slight differences) is used for both adding new
+and editing the properties of existing
+link:concept.html#Fixtures[Fixtures].
+
+*NOTE:* When editing an existing fixture, you can always choose a
+completely different fixture type to replace the previous one, but if
+their channels don't match each other exactly, any
+link:concept.html#Scene[Scene] functions you may have created, will very
+probably do things that you don't want. Also, if the channel counts
+don't match, you might end up having fixtures with overlapping channels,
+which results also to unwanted behaviour.
+link:concept.html#RGBMatrix[RGB Matrix], link:concept.html#EFX[EFX],
+link:concept.html#Chaser[Chaser] and
+link:concept.html#Collection[Collection] functions remain unaffected
+since they don't directly address specific channels, but are more
+dynamic in nature.
+
+==== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|*Fixture Model list* |Shows you a list of available fixture definitions
+and their general types. If you don't see your favourite fixture
+definition on the list, you can create one yourself with the
+accompanying, easy to use *QLC+ Fixture Editor*. Since QLC+ is
+completely free software, please consider sharing the definition files
+with the community at https://www.qlcplus.org/forum/viewforum.php?f=3
+
+|*Fixture Properties* a|
+* Name: The friendly name you wish to assign to the fixture
+* Mode: The link:concept.html#FixtureMode[mode] you have configured to
+the fixture
+* Universe: The DMX universe where the newly-added fixture(s) are
+connected to
+* Address: The address of the (first) fixture you are adding. If you are
+adding multiple fixtures, each consecutive fixture will be assigned an
+address immediately after the previous fixture's channels, unless
+address gap (see below) is non-zero.
+* Channels: If you have selected the *Generic* dimmer device, you can
+define its channel count to this field. Otherwise this field is
+read-only and it just tells you how many channels the currently selected
+fixture needs in its currently selected mode.
+* Channel list: This field displays a more detailed list of individual
+channels for the currently selected fixture and its mode. For *Generic*
+dimmers, this field remains empty since all dimmer channels are treated
+as dummy *intensity* channels.
+
+|*Multiple Fixtures* a|
+You can also add more than one fixture at the same time if your setup
+consists of multiple fixtures that are of the same make & model. These
+features are disabled when you are editing an existing fixture.
+
+* Amount: Number of new fixtures to create. Each newly-added fixture
+includes also a number after its assigned name when adding more than one
+fixture at a time.
+* Address gap: Leave this many empty channels between each new fixture
+
+|===
+

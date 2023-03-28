@@ -1,0 +1,64 @@
+== image:../icons/fixture.png[../icons/fixture,width=32] Fixture Manager
+
+The fixture manager is the heart of QLC+'s fixture-oriented
+architecture. As its name already says, you can manage (add, remove and
+edit) your lighting fixtures from the fixture manager. On the left side
+of the manager there is a list that displays all of the fixtures in the
+current workspace. When a fixture is selected, the right side of the
+window displays the details of the selected fixture. When a
+link:concept.html#FixtureGroup[Fixture Group] is selected, the right
+side of the window is occupied by the
+link:fixturegroupeditor.html[Fixture Group Editor].
+
+=== Controls
+
+[cols=",",]
+|===
+|image:../icons/edit_add.png[../icons/edit_add] |Add new
+link:concept.html#Fixtures[Fixture](s) to the workspace with the
+link:addeditfixtures.html[Add/Edit Fixture] dialog.
+
+|image:../icons/rgbpanel.png[../icons/rgbpanel] |Add a RGB panel to the
+workspace with with the link:addrgbpanel.html[Add RGB Panel] dialog.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected fixtures from the workspace. This also removes the fixtures
+from ALL groups they have been assigned to.
+
+|image:../icons/configure.png[../icons/configure] |Edit the currently
+selected fixture's properties with the
+link:addeditfixtures.html[Add/Edit Fixture] dialog.
+
+|image:../icons/fade.png[../icons/fade] |Opens the
+link:channelproperties.html[Channel Properties Configuration] window.
+
+|image:../icons/group.png[../icons/group] |Assign the selected fixtures
+to a link:concept.html#FixtureGroup[Fixture Group] displayed in a popup
+menu. If you have no groups defined yet, you can choose to create a new
+one from the menu that opens when this button is clicked.
+
+|image:../icons/ungroup.png[../icons/ungroup] |Resign (remove) the
+selected fixtures from the group they are currently in. Note that
+removing fixtures from a group will NOT destroy the fixtures completely.
+Also, removal from one group will not affect the fixtures' memberships
+to other groups.
+
+|image:../icons/up.png[../icons/up] |Move the selected Channel Group up
+
+|image:../icons/down.png[../icons/down] |Move the selected Channel Group
+down
+
+|image:../icons/fileimport.png[../icons/fileimport] |Imports a fixture
+list file (.qxfl) into QLC+. Please note that fixture addresses
+conflicts are not handled, so it is suggested to use this functionality
+on an empty project.
+
+|image:../icons/fileexport.png[../icons/fileexport] |Exports the list of
+fixtures currently available on a QLC+ project into a file with
+extension .qxfl. This file can be used afterward with the import
+functionality.
+
+|image:../icons/remap.png[../icons/remap] |Opens the
+link:fixturesremap.html[Fixtures remapping] window.
+|===
+

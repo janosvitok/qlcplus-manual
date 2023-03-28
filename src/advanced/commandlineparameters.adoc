@@ -1,0 +1,229 @@
+=== Command-Line Parameters
+
+QLC+ supports a number of command line parameters to automate/extend
+some functionalities on startup.
+
+Using command line parameters can be tricky depending on the operating
+system you're using:
+
+* *Linux*: just open a terminal and type "qlcplus" followed by the
+parameters you need
+
+* *Windows*: create a shortcut of qlcplus.exe (usually located in
+C:\QLC+) on your desktop. Right click on the shortcut and select
+"Properties". In the "Target" field you will see something like
+"C:\QLC+\qlcplus.exe". There you can add command line parameters. When
+done click OK.
+
+
+Example: Setting Czech locale:
+
+image:../images/locale.png[../images/locale]
+
+* *OSX*: This is the most difficult case since QLC+ on OSX is bundled
+into a DMG package. You need to open a terminal and "cd" into the QLC+
+DMG like this:
+
+cd QLC+.app\Contents\MacOS
+
+When done, type "qlcplus" followed by the parameters you need
+
+==== -c or --closebutton
+
+*Description:* Define a position for a close button in the virtual
+console. The button can be used to close QLC+. Only has an effect in
+kiosk mode (see -k) and is most useful when in fullscreen mode without a
+window manager.
+
+*Parameters:* x,y,w,h
+
+*Examples:*
+
+Create a button at (x400, y500) whose size is (w70, h50):
+
+qlcplus -c 400,500,70,50
+
+qlcplus --closebutton 400,500,70,50
+
+
+==== -d or --debug
+
+*Description:* Enable debug mode and optionally set the output level.
+Note that since 4.8.0 messages for level DEBUG (0) are not included in
+released binaries.
+
+*Parameters:* Level (see
+https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum[QtMsgType])
+
+*Examples:* +
+Enable debug mode and set debug level to 0: +
+qlcplus -d +
+qlcplus --debug +
+ +
+Enable debug mode and set debug level to 3: +
+qlcplus -d 3 +
+
+==== -f or --fullscreen
+
+*Description:* Start the application in fullscreen mode
+
+*Parameters:* Method (either 'normal' or 'resize')
+
+*Examples:* +
+Tell the window manager to give the whole screen space to QLC+: +
+qlcplus -f +
+qlcplus --fullscreen +
+qlcplus -f normal +
+qlcplus --fullscreen normal +
+ +
+Resize QLC+ to take up the whole screen space (useful in custom X11
+sessions without a window manager): +
+qlcplus -f resize +
+qlcplus --fullscreen resize +
+
+==== -g or --log
+
+*Description:* Log debug messages to a file ($HOME/QLC+.log)
+
+*Parameters:* None
+
+*Examples:* +
+Enable debug messages and store them to log +
+qlcplus -d 0 -g +
+qlcplus --debug 0 --log +
+
+==== -h or --help
+
+*Description:* Display command-line help (only in Linux & OS X)
+
+*Parameters:* None
+
+*Examples:* +
+Display the command-line help: +
+qlcplus -h +
+qlcplus --help +
+
+==== -k or --kiosk
+
+*Description:* Enable kiosk-mode (only link:virtualconsole.html[virtual
+console] is visible and the application is locked in
+link:concept.html#Modes[operate mode])
+
+*Parameters:* None
+
+*Examples:* +
+Start the application in kiosk mode: +
+qlcplus -k +
+qlcplus --kiosk +
+
+==== -l or --locale
+
+*Description:* Use the given locale for translation
+
+*Parameters:* Locale name (currently supported: ca_ES, cz_CZ, de_DE,
+en_GB, es_ES, fi_FI, fr_FR, it_IT, ja_JP, nl_NL, pt_BR)
+
+*Examples:* +
+Use finnish language: +
+qlcplus -l fi_FI +
+qlcplus --locale fi_FI +
+
+==== -m or --nowm
+
+*Description:* Inform the application that the system doesn't provide a
+window manager. QLC+ will therefore add some extra controls to close the
+windows.
+
+*Parameters:* None
+
+*Examples:* +
+Start QLC+ with no window manager: +
+qlcplus -m +
+qlcplus --nowm +
+
+==== -n or --nogui
+
+*Description:* Start the application with the GUI hidden (Raspberry Pi
+only)
+
+*Parameters:* None
+
+*Examples:* +
+Start QLC+ with no visible GUI: +
+qlcplus -n +
+qlcplus --nogui +
+
+==== -o or --open
+
+*Description:* Open the given workspace file
+
+*Parameters:* File name
+
+*Examples:* +
+Open mydesk.qxw: +
+qlcplus -o mydesk.qxw +
+qlcplus --open mydesk.qxw +
+
+==== -p or --operate
+
+*Description:* Start the application in link:concept.html#Modes[Operate]
+mode.
+
+*Parameters:* None
+
+*Examples:* +
+Start QLC+ in operate mode: +
+qlcplus -p +
+qlcplus --operate +
+
+==== -v or --version
+
+*Description:* Display the current application version number
+
+*Parameters:* None
+
+*Examples:* +
+qlcplus -v +
+qlcplus --version +
+
+==== -w or --web
+
+*Description:* Enable remote web access on port 9999
+
+*Parameters:* None
+
+*Examples:* +
+qlcplus -w +
+qlcplus --web +
+
+==== -wp or --web-port
+
+*Description:* Use a specific port for web access
+
+*Parameters:* Port number
+
+*Examples:* +
+qlcplus -wp 12345 +
+qlcplus --web-port 12345 +
+
+==== -wa or --web-auth
+
+*Description:* Enable remote web access with users authentication
+
+*Parameters:* None
+
+*Examples:* +
+qlcplus -wa +
+qlcplus --web-auth +
+
+==== -a or --web-auth-file
+
+*Description:* Specify a file where to store web access basic
+authentication credentials
+
+*Parameters:* File name
+
+*Examples:* +
+qlcplus -wa qlcplus_passwd +
+qlcplus --web-auth-file qlcplus_passwd +
+

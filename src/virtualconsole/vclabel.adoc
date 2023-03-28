@@ -1,0 +1,13 @@
+=== image:../icons/label.png[../icons/label] Virtual Console Label
+
+A Label is simply text field that can be placed on the Virtual Console
+to give additional information, for example, as a heading for a group of
+buttons or the title of a frame.
+
+==== Configuration
+
+You can only set up the text to be displayed in a Label with the
+*Rename* image:../icons/editclear.png[../icons/editclear] button. It
+does not have any other purpose nor configurable options, other than the
+standard link:vcstylingplacement.html[styling & placement options] that
+all Virtual Console widgets have.

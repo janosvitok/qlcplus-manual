@@ -1,0 +1,17 @@
+=== Show Editor
+
+The Show Editor is a panel to display the current structure of a
+image:../icons/show.png[../icons/show] link:concept.html#Show[Show]
+created with the link:showmanager.html[Show Manager]. +
+At the moment the Show Editor can only rename a Show, which is not
+possible in the Show Manager. +
+ +
+The tree view of this panel shows useful information regarding the
+displayed Show such as:
+
+* *Function:* the function name
+* *Steps:* the number of steps that compose a
+link:concept.html#Sequence[Sequence]
+* *Start Time:* the time at which a sequence is going to be reproduced
+* *Duration:* the duration of the sequence
+

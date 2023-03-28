@@ -1,0 +1,35 @@
+=== Add Button Matrix
+
+When you want to create many buttons at the same time on the
+link:virtualconsole.html[Virtual Console], you may do this by creating a
+link:vcbuttonmatrix.html[Button Matrix], using the Add Button Matrix
+dialog.
+
+[width="100%",cols="50%,50%",]
+|===
+|*Function list* |Shows you a list of functions that will be assigned to
+the buttons, one function per button.
+
+|image:../icons/edit_add.png[../icons/edit_add] |Add
+link:concept.html#Function[Functions] to the list.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected functions from the list.
+
+|*Dimensions* a|
+* Horizontal button count: Number of buttons to create horizontally
+* Vertical button count: Number of buttons to create vertically
+* Button size: The size of each button
+* Allocation: Shows you the number of functions currently in the list
+and the number of buttons that will be created with the current
+parameters. If you have less buttons than functions, the remaining
+functions will NOT be allocated to any buttons. On the other hand, if
+you have more buttons than functions, some buttons are not assigned a
+function, leaving them empty.
+
+|*Frame* a|
+* Normal: Place the buttons inside a link:vcframe.html[Normal Frame]
+* Solo: Place the buttons inside a link:vcsoloframe.html[Solo Frame]
+
+|===
+

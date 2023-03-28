@@ -1,0 +1,15 @@
+=== image:../icons/buttonmatrix.png[../icons/buttonmatrix] Virtual Console Button Matrix
+
+A Button Matrix is basically just a way for quickly creating multiple
+link:vcbutton.html[Buttons] at the same time inside a common container
+link:vcframe.html[Frame].
+
+When creating a new button matrix, you can assign functions to each of
+the buttons quite quickly with the link:addvcbuttonmatrix.html[Add
+Button Matrix] dialog.
+
+==== Configuration
+
+Refer to link:vcframe.html[Frame] and link:vcbutton.html[Button] on how
+to configure them.
+

@@ -1,0 +1,11 @@
+=== image:../icons/slidermatrix.png[../icons/slidermatrix] Virtual Console Slider Matrix
+
+A Slider Matrix is basically just a way for quickly creating multiple
+link:vcslider.html[Sliders] at the same time inside a common container
+link:vcframe.html[Frame].
+
+==== Configuration
+
+Refer to link:vcframe.html[Frame] and link:vcslider.html[Slider] for how
+to configure them.
+

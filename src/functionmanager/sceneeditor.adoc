@@ -1,0 +1,152 @@
+=== Scene Editor
+
+The scene editor, as its name suggests, is used to edit
+image:../icons/scene.png[../icons/scene] link:concept.html#Scene[Scene]
+functions. The editor is divided into tabs; with the first, *General*
+tab, you control the list of fixtures and
+link:concept.html#Channelgroups[channel groups] that take part in the
+scene editing, together with the Scene name. +
+All subsequent tabs are used to control the individual channel values
+for each fixture and, if any are defined, the channels groups values.
+
+==== General Tab Controls
+
+On the left hand part of the screen, the buttons to control the fixtures
+used in the scene are displayed. +
+
+[cols=",",]
+|===
+|*Scene name* |Change the name of the scene.
+
+|image:../icons/edit_add.png[../icons/edit_add] |Add an existing
+link:concept.html#Fixtures[Fixture] to the scene.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected link:concept.html#Fixtures[Fixture(s)] from the scene.
+
+|image:../icons/check.png[../icons/check] |Enable all channels of the
+selected fixtures.
+
+|image:../icons/uncheck.png[../icons/uncheck] |Disable all channels of
+the selected fixtures.
+|===
+
+On the right hand part of the screen, the buttons to control the
+link:concept.html#Channelgroups[channel groups] used in the scene are
+displayed +
+
+[cols=",",]
+|===
+|image:../icons/check.png[../icons/check] |Enable all the selected
+channel groups.
+
+|image:../icons/uncheck.png[../icons/uncheck] |Disable all the selected
+channel groups.
+|===
+
+ +
+*Hint:* It's useful to know that when a channels group is
+checked/unchecked, the fixtures controlled by the group will be
+automatically added to the left panel. The channels controlled by the
+group will also be automatically enabled/disabled on each fixture.
+
+==== Channel Groups Tabs
+
+This tab will be displayed only if one or more channel groups are
+selected in the General tab. +
+Each Channel Group will be displayed with a quick macro access button
+(link:concept.html#ClickAndGo[Click And Go] if supported), a label with
+the group value, a fader and the name of the group.
+
+==== Fixture Tabs
+
+Each fixture is represented by its own tab that contains sliders for
+each of the fixture's channels. Each channel can be enabled or disabled
+with a check box at the top of the channel unit. The value of each
+channel can be set either by typing the value to the edit box at the top
+of the slider or by moving the slider. Channels that provide multiple
+functions such as gobos, colors, etc. also have a button above the
+channel slider - this button can be used to directly select a specific
+function or capability provided by that channel. +
+*Hint*: The keyboard shortcut to move between channels values edit boxes
+is '*Tab*' to move to the right and '*Shift + Tab*' to move to the left.
+
+===== Channel enabled/disabled status
+
+If a channel has not been enabled, the scene will not touch that
+particular channel's value, ever.
+
+If a channel has been enabled, the scene will change that channel's
+value to the value that is defined in the scene. This is useful, for
+example, when you wish to control only the dimmer channel of a scanner
+fixture - you wouldn't want the scene to touch the scanner's pan, tilt,
+color or gobo channels when you just want to fade in or fade out with
+the dimmer channel.
+
+===== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|image:../icons/check.png[../icons/check] |Enable all channels from the
+current fixture. In all channels mode, select channels for all fixtures.
+
+|image:../icons/uncheck.png[../icons/uncheck] |Disable all channels from
+the current fixture. In all channels mode, disable channels for all
+fixtures.
+
+|image:../icons/back.png[../icons/back] |Go to the previous tab in the
+view. If the first tab is selected, this will go to the last tab in the
+view. Keyboard shortcut: '*ALT+Left*'
+
+|image:../icons/forward.png[../icons/forward] |Go to the next tab in the
+view. If the last tab is selected, this will go to the first tab in the
+view. Keyboard shortcut: '*ALT+Right*'
+
+|image:../icons/editcopy.png[../icons/editcopy] a|
+The Copy functionality has 2 modes: +
+
+Copy the values (and enabled/disabled states) of all channels in the
+current fixture to the clipboard.
+
+Copy only the selected channels (CTRL-clicked, yellow background) values
+into the clipboard.
+
+|image:../icons/editpaste.png[../icons/editpaste] |Paste the values from
+clipboard to the current fixture. If no channels were selected during
+'copy', then all the enabled/disabled states will be pasted along with
+the channel values.
+
+|image:../icons/editcopyall.png[../icons/editcopyall] a|
+The 'Copy all' functionality has 2 modes: +
+
+Copy all values (and enabled/disabled states) of all channels to all
+other fixtures taking part in the scene.
+
+Copy only the selected channels (CTRL-clicked, yellow background) values
+to all the other fixtures taking part in the scene.
+
+|image:../icons/color.png[../icons/color] |Launch a color tool to select
+a specific color and set that color to the current fixture; This feature
+is enabled only for fixtures that are capable of CMY/RGB color mixing.
+
+|image:../icons/xypad.png[../icons/xypad] |Launch a position tool
+(similar to link:vcxypad.html[XYPad] in Virtual console) to select a
+head/mirror position for the current fixture; This feature is enabled
+only for fixtures that have either pan or tilt channels. All heads of
+current fixture will be changed to the same value.
+
+|image:../icons/speed.png[../icons/speed] |Show/Hide the Speed Dial
+widget, used to adjust the Scene parameters such as Fade In and Fade Out
+
+|image:../icons/tabview.png[../icons/tabview] |Switch between "tab view"
+and "all channels view". The first mode will display one tab for each
+fixture, while the second will display a single tab for all the fixtures
+
+|image:../icons/blind.png[../icons/blind] |Toggle blind mode for the
+selected fixture.
+
+|image:../icons/record.png[../icons/record] |Clone the current scene and
+add a new step to the Chaser selected from the drop down list beside
+this button
+|===
+

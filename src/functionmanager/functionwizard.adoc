@@ -1,0 +1,34 @@
+=== Function Wizard
+
+The Function Wizard's purpose is to help users create some common
+functions for a quick start.
+
+==== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|*Fixture List* |List of fixtures that will be included in the functions
+created with the wizard. You can see each fixture's capabilities for
+Color-, Gobo- and Shutter- type scenes in the *Supported capabilities*
+column.
+
+|image:../icons/edit_add.png[../icons/edit_add] |Include
+link:concept.html#Fixtures[Fixtures] to the functions that will be
+created with the wizard.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected fixtures from the function to be created.
+
+|*Scenes* a|
+* Colors: Create scenes for changing the color simultaneously on all
+currently included fixtures. For this to work, the fixtures must have at
+least one color channel that controls a fixed-color wheel.
+* Gobos: Create scenes for changing the gobo simultaneously on all
+currently included fixtures. For this to work, the fixtures must have at
+least one gobo channel.
+* Shutter: Create scenes for changing the shutter position
+simultaneously on all currently included fixtures. For this to work, the
+fixtures must have at least one shutter channel.
+
+|===
+

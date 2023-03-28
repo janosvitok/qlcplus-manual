@@ -1,0 +1,153 @@
+=== RGB Matrix Editor
+
+The RGB matrix editor, as its name suggests, is used to edit
+image:../icons/rgbmatrix.png[../icons/rgbmatrix]
+link:concept.html#RGBMatrix[RGB matrix] functions. The function works on
+predefined image:../icons/group.png[../icons/group]
+link:concept.html#FixtureGroup[Fixture Groups] created by the user with
+the image:../icons/fixture.png[../icons/fixture]
+link:fixturemanager.html[Fixture Manager].
+
+==== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|*RGB matrix name* |Change the name of the RGB matrix.
+
+|image:../icons/speed.png[../icons/speed] a|
+Adjust the RGB Matrix speed settings:
+
+*Fade In:* The time it takes for the fixtures in the RGB Matrix fixture
+group to fade their intensity channels up
+
+*Fade Out:* The time it takes for the fixtures in the RGB Matrix fixture
+group to fade their intensity channels back to zero
+
+*Duration:* The duration of each step of the selected pattern
+
+|image:../icons/sequence.png[../icons/sequence] |Convert the current RGB
+Matrix into a link:concept.html#Sequence[Sequence]. This is useful to
+speed up the creation of a link:concept.html#Show[Show]. Please note
+that if the selected pattern generates random data, this functionality
+will generate a different Sequence every time.
+
+|image:../icons/square.png[../icons/square] |Switch the preview mode
+between circles and squares
+
+|image:../icons/player_play.png[../icons/player_play] |Make the RGB
+Matrix run as if it were started from a link:virtualconsole.html[Virtual
+Console] button. Note that the preview stops while the function is
+running.
+
+|*Fixture group* |The link:concept.html#FixtureGroup[Fixture Group] that
+is controlled by this RGB matrix.
+
+|*Preview area* |Shows a preview of the currently selected pattern
+imposed on the fixtures defined in the currently selected fixture group.
+Note that the preview doesn't show the difference between RGB-capable
+and monochrome/fixed color fixtures.
+
+|*Pattern* a|
+Select the pattern and colors that are used on the selected fixture
+group for drawing graphics. +
+Patterns can be:
+
+*Plain Color*: all the pixels of the matrix will be lit to the selected
+color
+
+ +
+
+*Animated Text*: display an animated text with the following parameters:
+
+* The text edit field is used to edit the text content that is
+scrolled/flashed on the matrix.
+* The font button image:../icons/fonts.png[../icons/fonts] is used to
+select the font (tip: bitmap fonts work best)
+* The drop-down box is used to select the animation style (Horizontal,
+Vertical or Letters)
+
+ +
+
+*Audio Spectrum*: QLC+ will start capturing data from the chosen audio
+input device and will represent the audio spectrum as vertical bars in
+the RGB Matrix with the selected start and end color. +
+For an optimal usage of this pattern, the hold time of the Matrix must
+be set to a reasonably low value (e.g. .20)
+
+ +
+
+*Image*: display an image loaded from a file, with the following
+parameters:
+
+* The text edit field is used to edit the image filename
+* The image button image:../icons/image.png[../icons/image] is used to
+load an image from file
+* The drop-down box is used to select the animation style (Static,
+Horizontal, Vertical or Animation)
+
+Supported formats: PNG, XPM, JPG, GIF (for animated gifs only first
+frame is used).
+
+Styles:
+
+* *Static* - the image is statically displayed on the matrix. If the
+image is smaller than the matrix, it is repeated in both directions.
+(Tip: for stripes, use 1-point-high images)
+* *Horizontal* - the image is scrolled horizontaly. Again, image is
+repeated in both directions.
+* *Vertical* - same as *Horizontal*, but in vertical direction.
+* *Animation* - play animation. Stack the frames (of width equal to
+matrix's) side by side in one image. For example, when matrix is 8x8 and
+you want to have 4 frames, make image 32x8. The image is still repeated
+vertically.
+
+ +
+The rest of the pattern list is filled with
+link:concept.html#RGBScript[RGB Scripts] loaded when QLC+ starts up. +
+Depending on the selected pattern, it is possible to choose a start and
+an end color. Some patterns do not allow colors at all (since they
+elapse them autonomously) or allow just one color. +
+
+|*Pattern Blend Mode* a|
+The blend mode is the mechanism used to mix multiple RGB Matrices
+running one on top of the other. +
+Here's a representation of how it works:
+
+image:../images/blending.png[../images/blending]
+
+The matrix running on the bottom layer must use the default mode, to
+prepare a ground of colors that all the above layers can use to perform
+blending.
+
+|*Pattern Color Mode* |The color mode is the mechanism select which
+color channels the RGB Matrices applies to. +
+Default setting is RGB mode, addressing RGB channels or CMY channels. If
+set otherwise, only the selected channels (e.g. "White") whill be set in
+a grayscale of the selected color(s). Channels not representing the
+selected color mode (e.g. R, G and B) will not be touched.
+
+|*Offset* a|
+Available only when *Text* or *Image* is the selected pattern.
+
+* *X:* Used to shift the pattern along the horizontal x-axis (negative
+values go to the left, positive values go to the right)
+* *Y:* Used to shift the pattern along the vertical y-axis (negative
+values go up, positive values go down)
+
+|*Run Order* a|
+* *Loop:* Run through the steps over and over again.
+* *Single Shot:* Run through the steps once and then stop.
+* *Ping Pong:* Run through the steps over and over again, reversing
+direction at both ends.
+
+|*Direction* a|
+* *Forward:* Run through the steps from start to end; 1, 2, 3...
+* *Backward:* Run through the steps from end to start; ...3, 2, 1
+
+|*Other Controls* a|
+* *Dimmer control:* When enabled, dimmer channel of include fixtures
+will be set to 100% when the matrix is running. Uncheck if you want
+independent intensity control.
+
+|===
+

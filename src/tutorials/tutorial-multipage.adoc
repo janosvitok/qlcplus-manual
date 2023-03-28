@@ -1,0 +1,120 @@
+=== Multipage frame tutorial
+
+This tutorial covers how to set up a multipage frame and related remote
+MIDI control. The main advatages of multipage frames are better usage of
+screen estate, and more functions can be controlled by limited number of
+available real faders.
+
+I will use Behringer BCF2000 as a MIDI controller in this tutorial,
+because that's what I own, but you can use any suitable controller.
+Besides that BCF2000 has flying (motorized) faders that are very handy
+when switching pages.
+
+Note: In previous QLC+ versions, it was require to edit MIDI profile to
+define Previous page and Next page buttons. This is no longer needed.
+
+==== Executive summary
+
+If you don't want to read the whole text, here are the bare bones of it:
+
+* Create frame/soloframe, enable pages in its properties, enter number
+of pages, and set the buttons from previous step as external input. Now
+page switching should work.
+* Put widgets to pages, external control will have "(Page X)" appended.
+* That's it.
+
+==== The plan
+
+We will proceed with this tutorial in several steps:
+
+* Initial setup
+* Create multipage frame
+* Setup remote control
+* Useful tips and improvements
+
+==== Initial setup
+
+To make thinds easy, let's assume we want to control 32 PAR cans on a
+dimmer addressed 1 to 32. we want to control them from BCF2000 MIDI
+controller (that has 8 flying faders). We want to make one fram with 4
+pages, each containing 8 sliders one for each PAR can. If you don't have
+enough dimmer channels at hand, either skip some channels and use only
+1-2 on each page, or just check the output in the DMX monitor window.
+
+First, go to Fixture Manager
+image:../icons/fixture.png[../icons/fixture] and add 32 generic dimmer
+channels.
+
+image:../images/multipage1.png[../images/multipage1]
+
+Next things will happen in Virtual console
+image:../icons/virtualconsole.png[../icons/virtualconsole].
+
+==== Create Multipage frame
+
+The most basic way how to create multipage frame is to create simple
+frame image:../icons/frame.png[../icons/frame]. Now right-click on the
+frame to open context menu, and select "Widget properties" (or press
+CTRL-E). Go to link:vcframe.html#pages["Pages"] tab. Select "Enable", to
+enable the multipage functionality. Enter "4" in the "Number of pages"
+edit box. Press "OK".
+
+image:../images/multipage2.png[../images/multipage2]
+
+Now we'll add the faders for the first page. Add 8 faders one by one.
+Then click on the image:../icons/forward.png[../icons/forward] button
+and do the same for page 2, and again for pages 3 and 4. For each
+button, open its Widget properties, select level mode, and select
+respective dimmer channel.
+
+image:../images/multipage3.png[../images/multipage3]
+
+Now change to operate mode, and check if the sliders work.
+
+===== Alternative approach
+
+Instead of separately creating sliders for each page, we could create
+them _before_ enabling pages and we would select also "clone first page
+widgets". Then all sliders will be cloned to all pages.
+
+==== MIDI control
+
+In the next step, we are going to setup MIDI remote control. In other
+words, we want to control switching of the pages and the sliders from
+the MIDI controller.
+
+We start in Input/Outputs tab and setting basic MIDI control. Select
+e.g. universe 2 for MIDI control, choose BCF2000 MIDI 1 port; check both
+"input" and "feedback", and select BCF2000 profile.
+
+Now go to the virtual console, right click the multipage frame, and
+select "Widget Properties". Select some buttons as external controls for
+Previous and Next page, either by autodetection, or choose from the list
+(Don't forget to disable autodetect for Previous Page when you are
+setting Next Page, otherwise you will change both!). I use "Button 9
+Top" for previous page, and "Button 10 TOP" for next page, but you can
+choose any buttons. Push OK to close the dialog. Now the two buttons
+should work. Try them now to switch the pages.
+
+The last thing to do is to link the sliders in the frame with the BCF
+faders. Select page 1, and open properties for every slider on the page,
+setting external control as usual. The BCF sliders will have "(Page 1)"
+appended to them ("82: Slider 1 (Page 1)"). When you are finished with
+the first page, select page 2, and do the same, and then page 3 and 4.
+Since with BCF200 we have MIDI feedback, it's not important if we switch
+pages in QLC+ or on the MIDI controller. For controllers without
+feedback, it's crucial to use buttons on the controller, otherwise the
+pages will get out of sync.
+
+Now you can test the sliders from MIDI controller - all of the 32 PAR
+cans should be controllable using those 8 faders and 2 buttons.
+
+==== Tips and tricks
+
+===== Multipage solo frames
+
+Solo frames work across pages. If you press a button on any page,
+buttons/widgets on all pages will et released.
+
+===== It is not possible (yet?) to set some buttons to select concrete page, e.g. button to select Page 1, another for Page 2, etc.
+

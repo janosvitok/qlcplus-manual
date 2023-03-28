@@ -1,0 +1,184 @@
+=== EFX Editor
+
+The EFX editor, as its name suggests, is used to edit
+image:../icons/efx.png[../icons/efx] link:concept.html#EFX[EFX]
+functions. The view is split into two tabs:
+
+* *General* tab is for selecting link:concept.html#Fixtures[Fixtures],
+speed and fixture order.
+* *Movement* tab is for selecting details on how the fixtures should
+move their beams.
+
+[[general-tab]]
+==== General Tab Controls
+
+image:../images/efx-general.png[../images/efx-general]
+
+[width="100%",cols="50%,50%",]
+|===
+|image:../icons/speed.png[../icons/speed] a|
+Adjust the EFX speed settings:
+
+*Fade In:* Not used currently
+
+*Fade Out:* Not used currently
+
+*Duration:* The duration of one full round using the selected pattern
+
+|image:../icons/player_play.png[../icons/player_play] |Enable the output
+and run the EFX to test how it looks like
+
+|*EFX name* |Change the name of the EFX.
+
+|*Fixture list* a|
+* Step: Shows the order in which the fixtures start their movement in
+serial/asymmetric order
+* Fixture: The name of each fixture that has been added to the EFX
+* Mode: The channels the EFX should control. They can be *Position*,
+*Dimmer* or *RGB* +
+Note: when selecting RGB, you might want to enable the "Color
+Background" described below.
+* Reverse: When checked, the fixture reverses its movement as opposed to
+non-reversed fixtures. The "normal" direction is set by direction in the
+"Movement" page.
+* Start Offset: Value in degrees, where on the movement path this
+fixture should start
+
+|image:../icons/edit_add.png[../icons/edit_add] |Add a
+link:concept.html#Fixtures[Fixture] to the EFX, after the currently
+selected position. Since EFX is used for moving the head or mirror of an
+intelligent fixture, only fixtures with *pan and tilt* capability (8bit
+or 16bit) can be added to an EFX.
+
+|image:../icons/edit_remove.png[../icons/edit_remove] |Remove the
+selected fixtures from the EFX.
+
+|image:../icons/up.png[../icons/up] |Raise the selected fixture upwards
+(earlier) in serial order.
+
+|image:../icons/down.png[../icons/down] |Lower the selected fixture
+downwards (later) in serial order.
+
+|*Fixture order* |Change the EFX's fixture order—see below.
+|===
+
+[[movement-tab]]
+==== Movement Tab Controls
+
+image:../images/efx-movement.png[../images/efx-movement]
+
+[width="100%",cols="50%,50%",]
+|===
+|*Pattern area* a|
+Shows a 2D-projection of the fixtures' head/mirror movement. Every time
+you change a parameter, one small dot for each fixture travels the
+complete path in its selected direction from its start offset.
+
+The speed of the movement reflects selected speed settings.
+
+|*Direction* a|
+Default direction of the fixtures (can be altered individually for each
+fixture by the checkbox in the *Reverse* column)
+
+* Forward: The fixtures move forwards along the pattern path
+* Backward: The fixtures move backwards along the pattern path
+
+|*Run order* a|
+* Loop: Run thru the steps over and over again.
+* Single Shot: Run thru the steps once and then stop.
+* Ping Pong: Run thru the steps over and over again, reversing direction
+at both ends.
+
+|*Pattern* a|
+Select the movement pattern algorithm.
+
+* Circle
+* Eight
+* Line: goes from one end to the other and back; faster in the middle,
+slower at the ends
+* Line2: goes in one direction only; speed is always the same
+* Diamond
+* Square
+* SquareChoppy
+* Leaf
+* Lissajous
+
+|*Parameters* a|
+* Width: Choose the pan width (0-255)
+* Height: Choose the tilt height (0-255)
+* X Offset: Move the pattern's horizontal (pan) centerpoint (0-255)
+* Y Offset: Move the pattern's vertical (tilt) centerpoint (0-255)
+* Rotation: Rotate the pattern along its axis (0-360 degrees)
+* Start Offset: Where along the path the movement should start (0-360
+degrees)
+* X Frequency: Change the *Lissajous* pattern's X (horizontal) frequency
+(0-32)
+* Y Frequency: Change the *Lissajous* pattern's Y (vertical) frequency
+(0-32)
+* X Phase: Change the *Lissajous* pattern's X (horizontal) phase (0-360
+degrees)
+* Y Phase: Change the *Lissajous* pattern's Y (vertical) phase (0-360
+degrees)
+
+|*Color Bacground* |When enabled, the EFX preview background will
+display a RGB palette, to show what the EFX does when controlling RGB
+channels
+
+|*Relative* |See below.
+|===
+
+==== Fixture Order
+
+Fixtures taking part in an EFX function can be set to follow the
+algorithm in certain order:
+
+*Parallel:* all fixtures follow the same pattern synchronously
+
+*Serial:* fixtures start following the pattern one after the other, with
+a little delay between each of them.
+
+*Asymmetric:* all fixtures start moving simultaneously, but with similar
+offset as in the Serial mode.
+
+==== Direction
+
+EFX functions' direction can be reversed for all fixtures at once or on
+a per-fixture basis. The function can also be set to do an infinite
+loop, an infinite ping-pong-loop (direction is reversed after each pass)
+or it can run through just once, in a single-shot mode, after which it
+terminates by itself. If the function is set to do an infinite loop, it
+must be stopped manually.
+
+==== Relative Mode
+
+EFX position is absolute by default-in other words, the selected EFX
+will exclusively control the X/Y position of the specified heads. When
+the Relative Mode checkbox is enabled, the EFX position acts as a layer
+on top of any position that has already been set (e.g. by a scene or
+even another EFX). In other words, the EFX is relative to current
+fixture position.
+
+In absolute mode. the EFX can be set to run at specific head position
+(e. g. do circle downstage center, stage left, etc.)
+
+In relative mode, the center of the preview window (offset x=127, offset
+y=127) will be applied to current head position.
+
+It is useful to reduce number of EFX presets: let's say we want to have
+3 types of EFX (pan saw, tilt saw, circle) at 4 places (e.g. 4 stage
+corners). In absolute mode that means 3x4 = 12 presets. If we want to
+change something, we have to edit many functions. We most probably need
+also one VC button for each. In relative mode, we create one EFX preset
+for each EFX type (pan saw, tilt saw, circle), and we set offset to
+neutral (x=127, y=127). Then, we create scenes with PAN & TILT channels
+for each position. Now we have only 3+4 presets (and 3+4 VC buttons,
+preferably in 2 solo frames).
+
+*Tips&Tricks*
+
+In relative mode, it is also possible to fade between positions (set
+fade time in scenes) while the EFX is running.
+
+Using XYPad and relative mode, it is possible to move EFX to any place
+during the show.
+

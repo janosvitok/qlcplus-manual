@@ -1,0 +1,59 @@
+=== Select Function(s)
+
+Whenever a link:concept.html#Functions[Function] needs to be selected,
+for example when you're adding steps to a
+link:concept.html#Chaser[Chaser], using the
+link:chasereditor.html[Chaser Editor], the *Select Function* dialog is
+used.
+
+Sometimes the destination that you are selecting the function for might
+allow the selection of multiple functions, for example, when adding
+steps to a Chaser or functions to a Collection. In these cases, the
+order in which the functions are selected will also be the order in
+which they are added to their destination. On the other hand, when
+attaching a function to a button in the link:virtualconsole.html[Virtual
+Console], you may select only one function at a time.
+
+Refer to your operating system manual for documentation on how to select
+multiple items in a list.
+
+==== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|*Functions to display* |There are two radio buttons on the top of the
+window: *All functions* and *Running functions*. +
+By clicking on them, the list below will be filled only with the desired
+functions. +
+For example, when performing a link:liveedit.html[Live edit], you might
+want to display only the running functions. +
+Obviously, in design mode, selecting "Running functions" will show an
+empty list.
+
+|*Function list* a|
+* Name: The names of available functions
+* Type: The type of each of the available functions
+
+|*Filter* a|
+You can filter the function list so that only those function *types*
+that have been checked are shown. Filtering is especially useful if you
+have lots of functions to select from.
+
+* Scenes: Display image:../icons/scene.png[../icons/scene]
+link:concept.html#Scene[Scene] functions in the selection list
+* Chasers: Display image:../icons/chaser.png[../icons/chaser]
+link:concept.html#Chaser[Chaser] functions in the selection list
+* EFX's: Display image:../icons/efx.png[../icons/efx]
+link:concept.html#EFX[EFX] functions in the selection list
+* Collections: Display
+image:../icons/collection.png[../icons/collection]
+link:concept.html#Collection[Collection] functions in the selection list
+* RGB Matrices: Display image:../icons/rgbmatrix.png[../icons/rgbmatrix]
+link:concept.html#RGBMatrix[RGB matrix] functions in the selection list
+* Show: Display image:../icons/show.png[../icons/show]
+link:concept.html#Show[Show] functions in the selection list
+* Audio: Display image:../icons/audio.png[../icons/audio]
+link:concept.html#Audio[Audio] functions in the selection list
+
+|===
+

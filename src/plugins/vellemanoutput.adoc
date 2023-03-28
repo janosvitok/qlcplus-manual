@@ -1,0 +1,16 @@
+=== Velleman output plugin
+
+==== Introduction
+
+The Velleman Output plugin supports the
+https://www.velleman.eu/locale/[Velleman] K8062D interface on Windows
+operating systems.
+
+==== Requirements
+
+===== Windows
+
+You must copy the proprietary Velleman
+https://www.qlcplus.org/misc/K8062DLL_mod1.zip[K8062D.dll file] into the
+QLC+ main folder (e.g. C:\QLC+).
+

@@ -1,0 +1,88 @@
+== image:../icons/function.png[../icons/function,width=32] Function Manager
+
+With the function manager you can manage all of your functions that do
+the actual work of automating your lights. You can create new functions,
+remove and edit existing ones as well as create copies of them. Controls
+are on the upper part of the window; the lower part displays all of your
+functions as well as the function editor for the currently selected
+function (if any).
+
+Each function type can be found under its own category: Scene for
+scenes, EFX for EFX's etc. When a new function is created or an existing
+one selected, the appropriate editor is chosen and displayed on the
+right hand side of the Function Manager window. Changes made in the
+editor pane are stored immediately in the functions themselves and no
+additional OK clicks are required.
+
+=== Controls
+
+[width="100%",cols="50%,50%",]
+|===
+|image:../icons/scene.png[../icons/scene] |Create a new
+link:concept.html#Scene[Scene] and edit it using the
+link:sceneeditor.html[Scene Editor]. (Shortcut: CTRL+1)
+
+|image:../icons/chaser.png[../icons/chaser] |Create a new
+link:concept.html#Chaser[Chaser] and edit it using the
+link:chasereditor.html[Chaser Editor]. (Shortcut: CTRL+2)
+
+|image:../icons/sequence.png[../icons/sequence] |Create a new
+link:concept.html#Sequencer[Sequence] and edit it using the
+link:chasereditor.html[Chaser Editor]. (Shortcut: CTRL+3)
+
+|image:../icons/efx.png[../icons/efx] |Create a new
+link:concept.html#EFX[EFX] and edit it using the link:efxeditor.html[EFX
+Editor]. (Shortcut: CTRL+4)
+
+|image:../icons/collection.png[../icons/collection] |Create a new
+link:concept.html#Collection[Collection] and edit it using the
+link:collectioneditor.html[Collection Editor]. (Shortcut: CTRL+5)
+
+|image:../icons/rgbmatrix.png[../icons/rgbmatrix] |Create a new
+link:concept.html#RGBMatrix[RGB Matrix] and edit it using the
+link:rgbmatrixeditor.html[RGB Matrix Editor]. (Shortcut: CTRL+6)
+
+|image:../icons/script.png[../icons/script] |Create a new
+link:concept.html#RGBScript[RGB Script] and edit it using the
+link:rgbmscriptapi.html[RGB Script Editor]. (Shortcut: CTRL+7)
+
+|image:../icons/audio.png[../icons/audio] |Create a new
+link:concept.html#Audio[Audio] function to be used in
+link:concept.html#Chaser[Chasers] or link:concept.html#Show[Shows].
+(Shortcut: CTRL+8)
+
+|image:../icons/video.png[../icons/video] |Create a new
+link:concept.html#Video[Video] function to be used in
+link:concept.html#Chaser[Chasers] or link:concept.html#Show[Shows].
+(Shortcut: CTRL+9)
+
+|image:../icons/folder.png[../icons/folder] |Create a new folder in the
+selected category. (Shortcut: CTRL+L) A folder can be renamed by double
+clicking on it. +
+When a folder is selected, a newly created function will be added to it.
+To move existing functions inside a folder, just select and drag them
+into it. In the same way they can be moved outside a folder by dragging
+them onto a category item. +
+When deleting a folder, all the functions and subfolders contained into
+it will be deleted as well. +
+*Note:* Empty folders will not be saved into your project.
+
+|image:../icons/autostart.png[../icons/autostart] |Open the Function
+selection dialog to choose a startup function. The selected function
+will be started every time QLC+ switches to operate mode. This is very
+useful when running QLC+ in kiosk mode (thus using
+link:commandlineparameters.html[-k or -p flags]) +
+A special entry named "<No function>" is present to remove a previously
+set startup function.
+
+|image:../icons/wizard.png[../icons/wizard] |Start the
+link:functionwizard.html[Function Wizard]. (Shortcut: CTRL+W)
+
+|image:../icons/editcopy.png[../icons/editcopy] |Create a copy of each
+of the selected functions. *Note*: cloning a Sequence will clone its
+bound Scene too.
+
+|image:../icons/editdelete.png[../icons/editdelete] |Permanently remove
+the selected function(s).
+|===
+

@@ -1,0 +1,126 @@
+== Supported Input Devices
+
+This table summarizes input devices (controllers) that are known to work
+with QLC+ and their settings. In addition to this list, most MIDI and
+OSC devices should work with QLC+. Please share your experiences in
+https://www.qlcplus.org/forum/[QLC+ forum].
+
+[cols=",,,,,,",options="header",]
+|===
+|Device |Type |link:midiplugin.html#midi-channel[Midi Channel]
+|link:howto-input-profiles.html[Input Profile]
+|link:midiplugin.html#midi-template[MIDI Template]
+|link:midiplugin.html#feedbacks[Supports feedback] |Comment
+|https://www.akaipro.com/product/apc20[Akai APC20]
+|link:midiplugin.html[MIDI] |1-16 |Akai APC20 |APC20 Ableton mode 2
+|link:midiplugin.html#akai-feedbacks[yes] |
+
+|https://www.akaipro.com/product/apc40[Akai APC40]
+|link:midiplugin.html[MIDI] |1-16 |Akai APC40 |APC40 Ableton mode 2
+|link:midiplugin.html#akai-feedbacks[yes] |
+
+|https://www.akaipro.com/product/apc40-mkii[Akai APC40 Mk2]
+|link:midiplugin.html[MIDI] |1-16 |Akai APC40 Mk2 |APC40 Mk2 Ableton
+mode |yes |
+
+|https://www.akaipro.com/product/apc-mini[Akai APC Mini]
+|link:midiplugin.html[MIDI] |1 |Akai APC Mini |APCmini Ableton mode 2
+|link:midiplugin.html#akai-feedbacks[yes] |
+
+|https://www.music-group.com/Categories/Behringer/Computer-Audio/Desktop-Controllers/BCF2000/p/P0246[Behringer
+BCF2000] in default mode |link:midiplugin.html[MIDI] |1 |Behringer
+BCF2000 |none |yes |
+
+|https://www.music-group.com/Categories/Behringer/Computer-Audio/Desktop-Controllers/BCF2000/p/P0246[Behringer
+BCF2000] in Mackie Control mode |link:midiplugin.html[MIDI] |1-16
+|Behringer BCF2000 in Mackie Control mode |none |yes |has more controls
+than the default mode
+
+|https://www.music-group.com/Categories/Behringer/Computer-Audio/Desktop-Controllers/BCR2000/p/P0245[Behringer
+BCR2000] in default mode |link:midiplugin.html[MIDI] |1 |Behringer
+BCR2000 |none |yes |
+
+|https://www.musictribe.com/Categories/Behringer/Lighting-Systems/DMX-Controllers/LC2412/p/P0058[Behringer
+LC2412] |link:midiplugin.html[MIDI] |1 |Behringer LC2412 |none |no |
+
+|https://www.behringer.com/Categories/Behringer/Computer-Audio/Desktop-Controllers/X-TOUCH-EXTENDER/p/P0CCR[Behringer
+X-Touch Extender] |link:midiplugin.html[MIDI] |1 |Behringer X-Touch
+Extender |none |no |
+
+|https://www.behringer.com/Categories/Behringer/Mixers/Digital/XR18/p/P0BI8[Behringer
+XR18] |link:oscplugin.html[OSC] |- |Behringer X-Air 18 |none |yes |
+
+|GLP Light Operator 24 |link:midiplugin.html[MIDI] |1 |Showtec
+Showmaster 24 |none |no |should work also with the 48 channel variant
+
+|https://www.elationlighting.com/midicon[Elation MIDIcon]
+|link:midiplugin.html[MIDI] |1-16 |Elation MIDIcon |none |yes |not
+tested
+
+|https://www.elationlighting.com/stage-setter-24[Elation Stage
+Setter-24] |link:midiplugin.html[MIDI] |1 |Showtec Showmaster 24 |none
+|no |should work also with the
+https://www.elationlighting.com/scene-setter-48[48 channel] variant
+
+|https://www.enttec.com/products/controls/wings/playback-wing/[Enttec
+Playback Wing] |Enttec |- |Enttec Playback Wing |- |yes |
+
+|https://www.enttec.com/products/controls/wings/shortcut-wing/[Enttec
+Shortcut Wing] |Enttec |- |Enttec Shortcut Wing |- |yes |
+
+|Generic MIDI |link:midiplugin.html[MIDI] |1 |Generic MIDI |- |no |
+
+|Korg nanoKONTROL |link:midiplugin.html[MIDI] |1 |Korg nanoKONTROL |none
+|no |
+
+|https://www.korg.com/us/products/controllers/nanokontrol2/[Korg
+nanoKONTROL 2] |link:midiplugin.html[MIDI] |1 |Korg nanoKONTROL2 |none
+|yes |
+
+|Korg nanoPAD |link:midiplugin.html[MIDI] |1 |Korg nanoPAD |none |no |
+
+|https://www.korg.com/us/products/controllers/nanopad2/[Korg nanoPAD 2]
+|link:midiplugin.html[MIDI] |1 |Korg nanoPAD2 |none |no |
+
+|Logitech Wingman Attack 2 |link:hidplugin.html[HID] |- |Logitech
+Wingman Attack 2 |- |no |
+
+|https://global.novationmusic.com/launch/launchpad[Novation Launchpad]
+|link:midiplugin.html[MIDI] |1 |Novation Launchpad |none |yes |
+
+|https://novationmusic.com/en/launch/launchpad-mk2[Novation Launchpad
+MK2] |link:midiplugin.html[MIDI] |1 |Novation Launchpad MK2 |none |yes |
+
+|https://novationmusic.com/en/launch/launchpad-pro[Novation Launchpad
+Pro] |link:midiplugin.html[MIDI] |1 |Novation Launchpad Pro |none |yes
+|should be set in Live mode
+
+|https://global.novationmusic.com/launch/launch-control#[Novation Launch
+Control] |link:midiplugin.html[MIDI] |1-16 |Novation Launch Control
+|none |yes |
+
+|https://novationmusic.com/en/launch/launch-control-xl[Novation Launch
+Control XL] |link:midiplugin.html[MIDI] |1-16 |Novation Launch Control
+XL |none |yes |
+
+|https://www.highlite.nl/Shop/Products/Showtec/Lightcontrollers/Fader-Desks/Showmaster-24-MKII?product_id=125045[Showtec
+Showmaster 24] |link:midiplugin.html[MIDI] |1 |Showtec Showmaster 24
+|none |no |should work also with the
+https://www.highlite.nl/Shop/Products/Showtec/Lightcontrollers/Fader-Desks/Showmaster-48-MKII?product_id=125045[48
+channel] variant
+
+|Stairville LC24 |link:midiplugin.html[MIDI] |1 |Showtec Showmaster 24
+|none |no |should work also with the 48 channel variant
+
+|https://liine.net/en/products/lemur/[Lemur] iPad Studio Combo
+|link:oscplugin.html[OSC] |- |Lemur iPad Studio Combo |- |yes |
+
+|https://hexler.net/software/touchosc[TouchOSC] Automat5
+|link:oscplugin.html[OSC] |- |TouchOSC Automat5 |- |yes |
+
+|https://hexler.net/software/touchosc[TouchOSC] Mix16
+|link:oscplugin.html[OSC] |- |TouchOSC Mix16 |- |yes |
+
+|https://www.zoom-na.com/products/production-recording/multi-track-recorders/zoom-r16-recorder-interface-controller[Zoom
+R16] |link:midiplugin.html[MIDI] |1-16 |Zoom R16 |none |no |
+|===

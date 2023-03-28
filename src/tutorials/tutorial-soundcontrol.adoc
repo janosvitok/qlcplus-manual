@@ -1,0 +1,41 @@
+=== Sound Control Tutorial
+
+This tutorial covers how to set up sound control for chasers.
+
+==== The steps
+
+. In image:../icons/function.png[../icons/function]Function Manager,
+create image:../icons/chaser.png[../icons/chaser]
+link:concept.html#Chaser[Chaser], set steps to have infinite hold time
+. In the
+image:../icons/virtualconsole.png[../icons/virtualconsole]Virtual
+Console, create
+image:../icons/cuelist.png[../icons/cuelist]link:vccuelist.html[cue
+list] for that chaser
+. Add
+image:../icons/audioinput.png[../icons/audioinput]link:audiotriggers.html[audio
+triggers] widget
+. In the audio trigger properties: choose proper frequency band (or use
+volume band), set type to
+image:../icons/virtualconsole.png[../icons/virtualconsole]VC Widget and
+select your image:../icons/cuelist.png[../icons/cuelist]cue list. Audio
+trigger will press image:../icons/forward.png[../icons/forward]"next"
+button on the cuelist.
+. now adjust parameters:
+* enable threshold - when the volume goes over enable threshold, the
+button will be pushed.
+* disable threshold - when the button is pushed, it won't be pushed
+again before the volume goes below this level. This is so that the
+button is pushed only once per beat
+* divisor - the button will be pushed every x-th beat - when you want to
+advance the chaser every other beat, put here 2, every 4-th beat - put
+4, etc.
+. close properties, start Operate mode, enable audiotriggers and that's
+it.
+
+The whole process is described in this
+https://www.youtube.com/watch?v=ITnbZgXqfU0[video].
+
+Audio Trigger widget offers more ways of sound control. For details, see
+link:audiotriggers.html[the description].
+
