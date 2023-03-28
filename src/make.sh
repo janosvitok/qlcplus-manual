@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/bin/sh
 
-asciidoctor-pdf qlcplus-manual.pdf -o ../out/qlcplus-manual.pdf
+asciidoctor-pdf qlcplus-manual.adoc -o ../out/qlcplus-manual.pdf
 
